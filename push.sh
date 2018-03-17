@@ -27,6 +27,8 @@ case ${input} in
 	;;
 esac
 
+#关联远程分支
+#git init && git checkout -b master && git remote add origin xxx && git branch -u origin/master
 
 #提交到当前远程分支
 #输入commit message
