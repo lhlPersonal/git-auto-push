@@ -1,6 +1,6 @@
 {
   "name": "git-auto-push",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A tool to auto run git commit and git push.",
   "keywords": [
     "autopush"

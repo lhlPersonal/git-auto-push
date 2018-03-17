@@ -37,5 +37,8 @@ git add .&& git commit -m "${msg}"
 
 #获取当前分支所在的远程分支
 currbh=`obtain_git_branch`
-#push
+
+#尝试两种方式提交
+git push origin HEAD:${currbh}
+
 git push origin HEAD:refs/for/${currbh}
