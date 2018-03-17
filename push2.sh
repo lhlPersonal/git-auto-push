@@ -47,6 +47,6 @@ git pull origin ${currbh}
 git add . && git commit -m "${MSG}"
 
 #push
-git push origin HEAD:refs/for/${currbh}
+git push origin ${currbh}
 
 echo 'exec end'
