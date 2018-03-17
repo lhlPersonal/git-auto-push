@@ -38,6 +38,8 @@ function obtain_git_branch {
 #获取当前分支所在的远程分支
 currbh=`obtain_git_branch`
 
+echo ${currbh}
+
 #pull
 git pull origin ${currbh}
 
