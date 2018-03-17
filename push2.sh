@@ -35,11 +35,14 @@ function obtain_git_branch {
     echo ${currbranch}
 }
 
-#提交到当前远程分支
-git add . && git commit -m "${MSG}"
-
 #获取当前分支所在的远程分支
 currbh=`obtain_git_branch`
+
+#pull
+git pull origin ${currbh}
+
+#提交到当前远程分支
+git add . && git commit -m "${MSG}"
 
 #push
 git push origin HEAD:refs/for/${currbh}
