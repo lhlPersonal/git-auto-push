@@ -23,7 +23,6 @@ if (['Y', 'y'].includes(needPush)) {
         //     }
         // });
 
-
         const ls = child.spawn('bash', [path.join(process.env['NODE_PATH'], 'git-auto-push', 'push2.sh'), '-m', cmtMsg, '-n', needPush]);
         //有返回就会输出，比较实时，且没有大小限制，适合大文件
         ls.stdout.on('data', function (data) {
