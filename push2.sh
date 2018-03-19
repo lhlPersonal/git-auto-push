@@ -31,12 +31,15 @@ function obtain_git_branch {
     result=`echo ${branch##*"*"}`
     result1=`echo ${result#*"/"}`
     currbranch=`echo ${result1%%":"*}`
+    currbranch1=`echo ${currbranch%%"]"*}`
 
-    echo ${currbranch}
+    echo ${currbranch1}
 }
 
 #获取当前分支所在的远程分支
 currbh=`obtain_git_branch`
+
+echo 'zzzz:'${currbh}
 
 #pull
 git pull origin ${currbh}
